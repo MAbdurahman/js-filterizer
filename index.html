@@ -17,6 +17,41 @@
     <title>js-filterizer</title>
 </head>
 <body>
+<!-- preloader -->
+<div class="preloader scrollbar-hidden" id="preloader">
+    <img alt="Three spinning gears" class="preloader__gif"
+         id="preloader__gif" src="./img/gifs/cube.gif"/>
+</div>
+<section class="section">
+    <div class="utils-container">
+        <div class="filterizer__section">
+            <div class="filterizer__section--upper">
+                <h2 class="filterizer__title">javaScript filterizer</h2>
+                <section class="filterizer__container">
+                    <ul class="filterizer__filters" id="filterizer__filters">
+                        <li class="filterizer__filter js-filter active"
+                            data-filter="all">
+                            foods
+                        </li>
+                        <li class="filterizer__filter js-filter"
+                            data-filter="shoes">
+                            burgers
+                        </li>
+                        <li class="filterizer__filter js-filter"
+                            data-filter="watches">
+                            hot dogs
+                        </li>
+                        <li class="filterizer__filter js-filter"
+                            data-filter="pants">
+                            drinks
+                        </li>
+                    </ul>
+                </section>
+            </div>
+            <div class="filterizer__section--lower"></div>
+        </div>
+    </div>
+</section>
 
 <!-- jquery scripts -->
 <script src="./js/jquery-3.6.4.min.js"></script>
