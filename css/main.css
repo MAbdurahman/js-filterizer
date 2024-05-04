@@ -86,6 +86,16 @@ html {
    font-size: 100%;
 
 }
+@media screen and (max-width: 767px) {
+   html {
+      font-size: 75%;
+   }
+}
+@media screen and (max-width: 500px) {
+   html {
+      font-size: 50%;
+   }
+}
 
 html,
 body {
@@ -234,7 +244,7 @@ input[type=number] {
 
 @media (min-width: 576px) {
    .utils-container {
-      max-width: 544px;
+      max-width: 100%;
    }
 }
 
@@ -516,6 +526,12 @@ to 100%, max-width property to a pixel value of choice, and height to auto*/
    }
 }
 
+@media only screen and (max-width: 988px) {
+   .filterizer__section--upper {
+      width: 100%;
+   }
+}
+
 .filterizer__title {
    position: relative;
    display: flex;
@@ -524,11 +540,18 @@ to 100%, max-width property to a pixel value of choice, and height to auto*/
    margin-bottom: 1em;
    font-family: "Lora", serif;
    font-size: 2.441rem;
+   font-size: var(--ft-fluid-text-600);
    font-weight: 600;
    color: var(--clr-augmented-800);
    text-transform: capitalize;
    text-align: center;
    letter-spacing: 1px;
+}
+
+@media screen and (max-width: 500px) {
+   .filterizer__title {
+      font-size: var(--ft-fluid-text-500);
+   }
 }
 
 .filterizer__container {
@@ -553,6 +576,7 @@ to 100%, max-width property to a pixel value of choice, and height to auto*/
 
 .filterizer__filter {
    padding: 16px 32px;
+   padding: 1em 2em;
    font-family: "Montserrat", sans-serif;
    font-size: medium;
    border: 1px solid hsl(210, 0%, 18%);
@@ -568,6 +592,7 @@ to 100%, max-width property to a pixel value of choice, and height to auto*/
    transition: background-position 0.25s ease-out;
    font-size: 0.85rem;
    font-size: clamp(0.8rem, 0.2vi + 0.76rem, 1rem);
+   font-size: var(--ft-fluid-text-100);
    font-weight: 600;
    text-transform: uppercase;
    letter-spacing: 1px;
@@ -588,4 +613,48 @@ to 100%, max-width property to a pixel value of choice, and height to auto*/
 .filterizer__filter.active {
    color: hsl(210, 0%, 98%);
    background-position: left bottom;
+}
+
+@media only screen and (max-width: 767px) {
+   .filterizer__filter {
+      font-size: var(--ft-fluid-text-100);
+   }
+}
+
+
+.filterizer__section--lower {
+   position: relative;
+   width: 100%;
+   height: fit-content;
+   margin-right: auto;
+   margin-left: auto;
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
+   grid-template-rows: repeat(3, 1fr);
+   grid-column-gap: 1.5em;
+   grid-row-gap: 2.5em;
+   padding-bottom: 3em;
+}
+
+.filterizer__card {
+   width: 25%;
+   padding: 8px;
+   background-color: hsl(210, 64%, 23%);
+}
+
+.filterizer__card figure img {
+   margin-bottom: 0.5em;
+}
+
+.filterizer__card--title {
+   color: hsl(210, 12%, 98%);
+   margin-bottom: 0.5em;
+}
+
+.filterizer__card__button--container {
+
+}
+
+.filterizer__para {
+   /*background-color: hsl(210, 64%, 23%);*/
 }
