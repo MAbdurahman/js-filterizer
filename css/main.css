@@ -532,7 +532,10 @@ to 100%, max-width property to a pixel value of choice, and height to auto*/
           filterizer section
 ==================================================================*/
 .section {
-   min-height: 100vh;
+   min-height: 100%;
+   min-width: 100%;
+   margin-left: auto;
+   margin-right: auto;
 }
 
 .filterizer__section {
